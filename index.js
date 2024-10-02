@@ -13,12 +13,14 @@ let allTodoList = localStorage.getItem('todo');
 allTodoList = JSON.parse(allTodoList);
 
 
+
 function GetAllToDo(allTodoList) {
     if (allTodoList == null || allTodoList.length == 0) {
-        toDoList.innerText = "No Todo item Found !!!"
-        toDoList.style.color = "white"
-        toDoList.style.display = "flex"
-        toDoList.style.justifyContent = "center"
+        toDoList.innerText = ""
+        toDoList.appendChild(noitemFoundMessage("No items Found !!!"))
+        // toDoList.style.color = "white"
+        // toDoList.style.display = "flex"
+        // toDoList.style.justifyContent = "center"
         toDoList.style.alignItems = "center"
         return
     }
@@ -149,7 +151,7 @@ function addElementInTodoArray(todovalue) {
     }
 
     const toDoValueStausObject = {
-        id: Todo.length + 1,
+        id: generateUniqueId(),
         task: todovalue,
         completed: false
     };
@@ -327,4 +329,16 @@ console.log(uniqueId);  // Example output: "1696249803546793"
 
 
 
-
+function noitemFoundMessage(message) {
+    
+    div = document.createElement('div')
+    div.style.color = "white"
+    div.style.display = "flex"
+    div.style.justifyContent = "center"
+    div.style.alignItems = "center"
+    div.innerText = message
+    div.style.height = '100%'
+    div.style.width = '100%'
+    
+    return div
+}
