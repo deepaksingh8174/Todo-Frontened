@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body-content">
+        <div class="content">
+            <div class="sub-content">
+                <h1>TODO</h1>
+                <div class="header task">
+                    <input type="text" />
+                    <button class="button-style-add button-style" value="add">Add</button>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <ul>
+                        <div class="todo-list">
+                            <li class=task>
+                                <button class="button-style task-done"></button>
+                                <p class="task1">Task 1</p>
+                            </li>
+                            <li class="task">
+                                <div class="list-item">
+                                    <div class="button-and-task">
+                                        <button class="button-style"></button>
+                                        <p>Task 2</p>
+                                    </div>
+                                    <div class = image>
+                                        <img class="cross" src="./images/icon-cross.svg" alt="" />
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="task">
+                                <button class="button-style"> </button>
+                                <p>Task 6</p>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class="footer task">
+                        <div class="items-left">0 items left</div>
+                        <div class="middle-footer">
+                            <p class="todo-status" id="all">All</p>
+                            <p class="todo-status" id="active">Active </p>
+                            <p class="todo-status" id="completed">Completed</p>
+                        </div>
+                        <div class="todo-status" id="clear-completed">Clear Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

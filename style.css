@@ -1,0 +1,354 @@
+/* 
+
+Sizing Units
+Basic Units :- 1em = 16px (em is decided by parent size and it is basic unit of css sizing.It will generally not usable)
+rem :- It is similar to em but its size is decided by root element(which is an html tag)
+px :- It is an absolute value it does not depend on any parent
+vw :- It stands for viewport width. It is best suitable for width of a block level container
+vh :- It stands for viewport height it is best suitable for height of a block level container
+% :- It is an relative unit of size it is given by based on parent
+
+
+Box Model
+All the things are is treated in box. Every container is treated is like box in css.
+
+When we assign height and width to any conatainer then it is applied on content because in default box model of css (box-sizing:content-box).
+Padding is applied inside the border. It works on clockwise direction when we gives padding sizes.
+margin is applied outside the border. It works just like padding but differnce is it gives the spacing between the multiple container on which margin is applied and padding gives space between border and content.
+**Box-sizing : content-box, In this all the size of container which is provided by the css gives to content and padding and margin will be applying added seprately.
+**Box-sizing : border-box, In this the size is given up to boder which is provide by the css it will decrease the size of content.
+
+
+
+Display Property 
+display : block/inline/inline-block/none
+
+=> Block Elements are (div, h1-h6, p, li, ul) which takes full space of window and it can takes height and width.
+=> Inline Elements are (a, span) which takes space required as much as content requires and it can not takes height and width and margin and padding is not apply on top and bottom.
+=>Inline block Elements are (img) which takes sapce as much as requires(just like inline element) but we can also provide height and width (just like block element). Therefore it is called inline block element.
+=>None shows nothing on display properties.
+
+
+Position Property
+position := static/realtive/absolute/fixed/sticky
+
+=>Static :- By Default property of any conatianer is static.
+=>Relative :- It will be Relative to parent
+=>Absolute :- It will be realtive to any parent which can takes postion relative if any of the parent can not takes position relative then It will relative to by default root element of a HTML. If any contianer is applied to postion absolute then it will be freely moveable which is decided by parent element on the basis of (top, left, right, bottom postioning in the pixel)
+=>Fixed :- It will be fixed in case of root of an element(that is HTML tag)
+=>Sticky :- It will be fixed in respect to parent element when it is visble on the screen it will be move up when parent element is moving up.
+
+
+It takes two argument top and left which tells us position from a parent div if we are using postion element.
+
+
+
+Overflow, Float and Clear Property
+Overflow : visible/none/scroll/auto
+
+=>Visible :- It is by default Property of a container when content is overflow from the border layout.
+=>scroll :- It gives scrollable silder in right and bottom by default whther content length is greater than box or not.
+=>auto :- It gives when we required scroll
+=>none :- 
+
+Float := right/left
+
+=>In Float property we have to use generally when we are using image and div container for assigning left and right to the image and content we will use float property (basically a div container content can write after/before spacing covered by an image)
+=>right :- It means image will be floating right (if we apply float property on image tag)
+=>left :- It means iamge will be floating left (if we apply float property on image tag)
+
+Clear := right/left/both
+=>If we want to remove an float property from a div content then we will use clear property
+=>right :- 
+=>left :- 
+=>both :- 
+
+
+
+Flex Properties 
+It is of two types parent and children Properties 
+Parent Properties
+
+=>display :- flex
+=>flex-direction :- row/column/row-reverse-column-reverse
+=>flex-wrap :- nowrap/wrap
+=>justify-content :- flex-start/flex-end/center
+By default flex-direction is row. In row jsutify content is always applicable for x-axis and text- align will be apply on y-axis nd its vice-versa.
+=>align-items:- center/stretch/flex-start/flex-end (default value is stretch)
+align-items will specifies the items align in y-axis
+=>gap :- 10px(it will specifies the gap between inside the content(inside the div) not on the main content).
+=>align-content :- flex-start/flex-end/center (It will specifies the content when wrap is on or content will show on mutiple row and it is basically apply on y-axis).
+
+
+Child Object properties
+These properties are only applicable in child classes inside the flex parent container
+
+=>order :- 1 (By default value is 0 if any container has grater than value then it will goes in last container.
+=>flex-grow :- With the help of this properties we will decide how to grow a container width on increasing the size of parent div.
+=>flex-shrink :- With the help of this properties we will decide how to shrink a container width on decreasing the size of parent div. Its default value is 1.
+=>flex-basis :- With the help of we will provide the width of a container intially.(if the flex direction is row) and if the flex direction is column then it will set box height.
+=>align-self :- center/stretch/flex-start/flex-end (It will provide to align the child content individually with respect to parent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.sub-content {
+    border: 4px solid yellow;
+    width: 600px;
+}
+
+h1 {
+    letter-spacing: 8px;
+}
+
+
+
+.body-content {
+    border: 3px solid black;
+    background: url("./images/bg-desktop-dark.jpg") no-repeat right top;
+    height: 650px;
+    width: 1400px;
+    /* margin: 110px 250px; */
+    margin: auto;
+    background-color: #211f1f;
+    color: white;
+
+
+}
+
+input {
+    border-style: none;
+    width: 100%;
+    background-color: #25273c;
+    color: white;
+    border-radius: 1px;
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+    border: 4px solid yellowgreen;
+}
+
+
+img {
+    height: 30px;
+    width: 32px;
+    border-radius: 80%;
+    /* border-color: rgb(89, 113, 190);
+    background-color: rgb(89, 113, 190); */
+    /* margin: 15px; */
+    padding: 10px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.task1 {
+    color: #727272;
+    text-decoration: line-through;
+}
+
+
+button {
+    height: 20px;
+    width: 20px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    background-color: #25273c;
+    border-radius: 80%;
+    margin: 15px;
+}
+
+.button-style-add {
+    height: 100%;
+    width: 80px;
+    background-color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.button-style:hover {
+    cursor: pointer;
+    border-color: rgb(89, 113, 190);
+}
+
+
+.task {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #25273c;
+    border-bottom: 0.1rem solid rgb(102, 88, 88);
+}
+
+.footer {
+    justify-content: space-between;
+    color: rgba(73, 101, 114, 403);
+    align-items: center;
+    padding: 0 18px;
+    box-sizing: border-box;
+    border-bottom: none;
+}
+
+
+.middle-footer {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+
+}
+
+.todo-status:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.header {
+    margin-bottom: 45px;
+    border-bottom: none;
+    border-radius: 10px;
+}
+
+
+
+.task-done {
+    background: #91a5ef url(./images/icon-check.svg) no-repeat center;
+}
+
+
+
+.todo-list {
+    /* min-height: 50px;
+    max-height: 350px; */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    border: 1px solid red;
+    overflow: auto;
+    border-radius: 5px;
+
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+p {
+    display: inline-block;
+}
+
+/* image{
+    background-color: rgb(89, 113, 190);
+} */
+
+
+
+/* @media screen and (max-width = 1400px) and (max-height = 563px)  {
+     .sub-content {
+        width: 100%;
+        height:100%;
+        background-color: red;
+     }
+}
+
+@media  screen and (max-width = 600px) {
+    .content{
+        width: 100%;
+        background-color: green;
+    }
+} */
